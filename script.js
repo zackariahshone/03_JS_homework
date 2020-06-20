@@ -8,8 +8,9 @@ let lCase = "";
 let numStr = "";
 let specChar = "";
 let pLength;
-//gather info from the user to decide what character usage the user would like. 
+//creat a function to gather info from the user to decide what character usage the user would like. 
 function preferences() {  
+
 const inputU = prompt("Use Upper Case: Y N");
 const inputL = prompt("Use Lower Case: Y N");
 const inputN = prompt("Use Numeric: Y N");
@@ -55,21 +56,21 @@ return passChar;
 }
 // Write password to the #password input
 function generatePassword(){
- const passChar = preferences();
+const passChar = preferences();
 
 console.log("set gneratePasswod is working with: " + passChar);
 //do while to repeat the prompt if the user does not enter an int between 8 and 128
 do{
   pLength = prompt("Password needs to be between 8 and 128 char long: ");
-  if(pLength<8){
+  if(pLength < 8){
     alert("password length too small");
   }
-  if(pLength>128){
+  if(pLength > 128){
     alert("password length too big")
   }
-}while(pLength<8||pLength > 128)//end while
+}while(pLength < 8||pLength > 128)//end while
 
-let pWord="";//pWord starting empty 
+let pWord=""; //pWord starting empty 
 
 for(let i = 0; i<pLength;i++){
   pWord = pWord + passChar.charAt(Math.floor(Math.random() * passChar.length-1));
