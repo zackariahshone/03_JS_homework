@@ -11,11 +11,12 @@ let pLength;
 //creat a function to gather info from the user to decide what character usage the user would like. 
 function preferences() {  
 
-const inputU = prompt("Use Upper Case: Y N");
-const inputL = prompt("Use Lower Case: Y N");
-const inputN = prompt("Use Numeric: Y N");
-const inputS = prompt("User Special Char: Y N");
+const inputU = prompt("Use Upper Case: Y N").toLowerCase();
+const inputL = prompt("Use Lower Case: Y N").toLowerCase();
+const inputN = prompt("Use Numeric: Y N").toLowerCase();
+const inputS = prompt("User Special Char: Y N").toLowerCase();
 //using the input in some logic to check and use what was selected
+
 if(inputU === "y"){
   console.log(inputU);
   uCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -43,10 +44,10 @@ if (inputS === "y") {
   specChar = "";
 }
 //proofing the answer 
-//if(inputU !== "y"||inputU !== "n"||inputL !== "y"||inputL !== "n"||inputN !== "y"||inputN !== "n"||
-//inputS !== "y"||inputS !== "n"){
-//  alert("not all preferences answered")
-//}
+if(inputU !== "y"||inputU !== "n" && inputL !== "y"||inputL !== "n" && inputN !== "y"||inputN !== "n"&&
+inputS !== "y"||inputS !== "n"){
+  alert("not all preferences answered")
+}
 
 //create on string out of the selecting options 
 let passChar = uCase.concat(lCase,numStr,specChar);
