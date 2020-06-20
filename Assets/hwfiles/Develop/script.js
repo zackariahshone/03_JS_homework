@@ -40,10 +40,10 @@ if (inputS === "y") {
   specChar = "";
 }
 //proofing the answer 
-if(inputU !== "y"||inputU !== "n"||inputL !== "y"||inputL !== "n"||inputN !== "y"||inputN !== "n"||
-inputS !== "y"||inputS !== "n"){
-  alert("not all preferences answered")
-}
+//if(inputU !== "y"||inputU !== "n"||inputL !== "y"||inputL !== "n"||inputN !== "y"||inputN !== "n"||
+//inputS !== "y"||inputS !== "n"){
+// alert("not all preferences answered")
+//}
 
 //create on string out of the selecting options 
 let passChar = uCase.concat(lCase,numStr,specChar);
