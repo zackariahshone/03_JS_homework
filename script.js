@@ -120,5 +120,3 @@ function writePassword() {
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-//<button id='test' class ="btn" > test this </button>
-document.getElementById('test').addEventListener('click', testDo);
