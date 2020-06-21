@@ -94,7 +94,7 @@ function generatePassword() {
   console.log("set gneratePasswod is working with: " + passChar);
   //do while to repeat the prompt if the user does not enter an int between 8 and 128
   do {
-    pLength = prompt("Password needs to be between 8 and 128 char long: ");
+    pLength = prompt("Password needs to be between 8 and 128 numbers long: ");
     if (pLength < 8) {
       alert("password length too small");
     }
