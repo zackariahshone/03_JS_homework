@@ -1,48 +1,23 @@
-# 03 JavaScript: Password Generator
+Using the generate password button The user is prompeted with four options of how they want their password to look. 
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+1 Inclued Upper case
+2 Inclued Lower case
+3 Inclued Numbers
+4 Inclued Special Char
 
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
+Before assigning a string of char I created variables of empty strings so i could later change their values depending the answer of the user
 
-## User Story
+Input is brought in from the user with my preferences function which returns the prefered string of characters
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+While gathering input I used while loops and do while loops depending on if I needed to check conditions before or after a block of code runs. Gathering my yes and no answers if the answer does not === Y or N or is Blank on any answer this block runs until all conditions are met 
 
-## Acceptance Criteria
+Then depending on what answers are chosen I have my char sets being assigned accordingly and then I concatonate my strings if it will use empty string if the user entered n or it will populate the string with which ever char set chosen and add them all to gether and return the passChar which is the full set of variables. 
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+In the generate function I called my preferences and assigned it to passChar. I logged it in console to varifiy my data set. Then the user is prompted for how long the password should be which sets the pLenght for the for loop telling the program to iterate pLength many times. If the user selects something over 128 or under 8 they are alerted and prompted until they get it correct. 
 
-The following image demonstrates the application functionality:
+Once they enter a correct number it is then passed on to the next step which is to pull characters from the string at random. I created an empty string called pWord to use here and add to the the empty string as random numbers are enter in the char(randomnumbers).length of the password data set. This function returns the pWord(password that has been generated)
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+The last function which writes the final password the web page calls the generate password function which returns the value of pWord. That value is assigned to password. 
 
-## Review
+Lastly an event listener is set to fire writePassword() when the generate password button is clicked. 
 
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

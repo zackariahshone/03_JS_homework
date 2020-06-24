@@ -15,19 +15,6 @@ let pLength;
  let inputS = "";
 
 //creat a function to gather info from the user to decide what character usage the user would like. 
-
-
-function testDo(){
-let userInput; 
-let userInput2;
-do{
- userInput = prompt("y or n");
- userInput2 = prompt("Y or N");
-}
-while(userInput === '' || userInput2 === '');
-}
- 
-
 function preferences() {
 do{
   inputU = prompt("Use Upper Case: Y N").toLowerCase();
@@ -36,20 +23,18 @@ do{
   inputS = prompt("User Special Char: Y N").toLowerCase();
 
   if(inputU !== "y" && inputU !== "n" ||
-  inputL !== "y" && inputL !== "n" ||
-  inputN !== "y" && inputN !== "n" ||
-  inputS !== "y" && inputS !== "n"){
+     inputL !== "y" && inputL !== "n" ||
+     inputN !== "y" && inputN !== "n" ||
+     inputS !== "y" && inputS !== "n"){
     alert("something was blank start over");
   } 
-
-
 }
   //using the input in some logic to check and use what was selected
    //proofing the answer
   while(inputU !== "y" && inputU !== "n" ||
-      inputL !== "y" && inputL !== "n" ||
-      inputN !== "y" && inputN !== "n" ||
-      inputS !== "y" && inputS !== "n") 
+        inputL !== "y" && inputL !== "n" ||
+        inputN !== "y" && inputN !== "n" ||
+        inputS !== "y" && inputS !== "n") 
 
   if (inputU === "y") {
     console.log(inputU);
@@ -77,10 +62,6 @@ do{
   } else if (inputS === "n") {
     specChar = "";
   }
-
- 
-
-
   //create on string out of the selecting options 
   let passChar = uCase.concat(lCase, numStr, specChar);
   //checking what we are working with
@@ -105,9 +86,9 @@ function generatePassword() {
 
   let pWord = ""; //pWord starting empty 
 
-  for (let i = 0; i < pLength; i++) {
+  for (let i = 0; i < pLength; i++) {                              //10
     pWord = pWord + passChar.charAt(Math.floor(Math.random() * passChar.length - 1));
-  }
+  }                                            
   return pWord;
 }
 
