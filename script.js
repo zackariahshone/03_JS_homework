@@ -9,10 +9,10 @@ let numStr = "";
 let specChar = "";
 let pLength;
 
- const inputU = "";
- const inputL =  "";
- const inputN = "";
- const inputS = "";
+ let inputU = "";
+ let inputL =  "";
+ let inputN = "";
+ let inputS = "";
 
 //creat a function to gather info from the user to decide what character usage the user would like. 
 function preferences() {
